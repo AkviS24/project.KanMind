@@ -5,6 +5,8 @@ const GUEST_LOGIN = {
 
 const API_BASE_URL = '/kanmind-api/';
 
+const DEMO_API_BASE_URL = '/kanmind-demo-api/';
+
 const LOGIN_URL = 'login/';
 
 const REGISTER_URL = 'registration/';
