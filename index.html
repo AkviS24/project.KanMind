@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Redirecting...</title>
 
-    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
-
-    <link rel="stylesheet" href="../../shared/css/variables.css">
-    <link rel="stylesheet" href="../../shared/css/standard.css">
-    <link rel="stylesheet" href="../../shared/css/fonts.css">
-    <link rel="stylesheet" href="../../shared/css/assets.css">
+    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./shared/css/variables.css">
+    <link rel="stylesheet" href="./shared/css/standard.css">
+    <link rel="stylesheet" href="./shared/css/fonts.css">
+    <link rel="stylesheet" href="./shared/css/assets.css">
 
     <script>
         function init() {
             const isAuthenticated = localStorage.getItem('auth-user-id') !== null;
+            const isDemoSession = localStorage.getItem('auth-demo-session') === 'true';
 
-            if (isAuthenticated) {
+            if (isAuthenticated && isDemoSession) {
                 window.location.href = "./pages/dashboard/index.html";
-            } else {
-                window.location.href = "./pages/auth/login.html";
+                return;
             }
-        };
+
+            [
+                'auth-token',
+                'auth-user-id',
+                'auth-email',
+                'auth-fullname',
+                'auth-demo-session'
+            ].forEach((key) => localStorage.removeItem(key));
+
+            window.location.href = "./pages/auth/login.html";
+        }
     </script>
 </head>
 <body onload="init()" class="d_flex_cc_gl">
