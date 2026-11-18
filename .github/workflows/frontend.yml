@@ -29,3 +29,4 @@ jobs:
           node --check shared/js/config.js
           node --check shared/js/api.js
           node --check shared/js/auth.js
+          node --check shared/js/header.js
