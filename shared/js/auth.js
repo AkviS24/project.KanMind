@@ -37,7 +37,7 @@ async function logIn(data, isGuest = false) {
     if (!response.ok) {
         setError(true, "error_login")
     } else {
-        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname)
+        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname, isGuest)
         window.location.href = "../dashboard/index.html"
     }
 }
