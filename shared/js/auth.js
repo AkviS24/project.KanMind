@@ -14,7 +14,7 @@ async function signUpSubmit(event) {
 }
 
 async function registration(data) {
-    let response = await postData(REGISTER_URL, data);
+    let response = await postData(REGISTER_URL, data, API_BASE_URL);
     if (!response.ok) {
         let errorArr = extractErrorMessages(response.data)
         showToastMessage(true, errorArr)
