@@ -16,13 +16,7 @@ function getHeaderTemplate() {
     const currentUrl = window.location.href;
     
     if (currentUrl.endsWith('login.html')) {
-        return `
-        <div class="d_flex_cc_gm">
-            <a href="./register.html" class="std_btn btn_prime pad_s d_flex_cc_gs">
-                <img src="../../assets/icons/sign_up_icon.svg" alt="" srcset=""> 
-                Sign up
-            </a>
-        </div>`
+        return ''
     } else if (currentUrl.endsWith('register.html')) {
         return `
         <div class="d_flex_cc_gm">
