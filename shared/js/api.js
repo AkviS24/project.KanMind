@@ -19,9 +19,7 @@ function removeAuthCredentials() {
 }
 
 function getApiBaseUrl() {
-    return localStorage.getItem('auth-demo-session') === 'true'
-        ? DEMO_API_BASE_URL
-        : API_BASE_URL;
+    return DEMO_API_BASE_URL;
 }
 
 function getAuthToken() {
