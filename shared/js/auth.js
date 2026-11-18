@@ -19,7 +19,7 @@ async function registration(data) {
         let errorArr = extractErrorMessages(response.data)
         showToastMessage(true, errorArr)
     } else {
-        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname, isGuest)
+        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname)
         window.location.href = "../dashboard/index.html"
     }
 }
@@ -95,7 +95,7 @@ function validateLoginPW(element) {
 }
 
 function validateEmail(element) {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
     let valid = emailRegex.test(element.value.trim())
     setError(!valid, element.id + "_group")
     return valid;
