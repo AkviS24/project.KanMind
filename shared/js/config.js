@@ -3,7 +3,9 @@ const GUEST_LOGIN = {
     "password": "asdasdasd"
 }
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api/';
+const API_BASE_URL = '/kanmind-api/';
+
+const DEMO_API_BASE_URL = '/kanmind-demo-api/';
 
 const LOGIN_URL = 'login/';
 

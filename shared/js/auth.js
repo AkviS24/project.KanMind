@@ -14,7 +14,7 @@ async function signUpSubmit(event) {
 }
 
 async function registration(data) {
-    let response = await postData(REGISTER_URL, data);
+    let response = await postData(REGISTER_URL, data, API_BASE_URL);
     if (!response.ok) {
         let errorArr = extractErrorMessages(response.data)
         showToastMessage(true, errorArr)
@@ -31,19 +31,20 @@ async function logInSubmit(event) {
     await logIn(data)
 }
 
-async function logIn(data) {
-    let response = await postData(LOGIN_URL, data);
+async function logIn(data, isGuest = false) {
+    const baseUrl = isGuest ? DEMO_API_BASE_URL : API_BASE_URL;
+    let response = await postData(LOGIN_URL, data, baseUrl);
     if (!response.ok) {
         setError(true, "error_login")
     } else {
-        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname)
+        setAuthCredentials(response.data.token, response.data.user_id, response.data.email, response.data.fullname, isGuest)
         window.location.href = "../dashboard/index.html"
     }
 }
 
 function guestLogin() {
     setError(false, "error_login")
-    logIn(GUEST_LOGIN)
+    logIn(GUEST_LOGIN, true)
 }
 
 function validateFullname(element) {
