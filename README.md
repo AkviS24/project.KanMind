@@ -31,8 +31,16 @@ Dieses Frontend wurde bewusst mit **Vanilla JavaScript** erstellt, um die folgen
 
 ---
 
-## Hinweis
+## Öffentliche Portfolio-Demo und Lizenz
 
-Dieses Projekt ist **ausschließlich für Schüler der Developer Akademie** gedacht und nicht zur freien Nutzung oder Weitergabe freigegeben.
+Dieses Repository enthält bereitgestellte Bestandteile der Developer Akademie. Für diese Bestandteile gilt die beigefügte **Developer Akademie Lernlizenz (Nicht-kommerziell)**. Die Lizenzdatei bleibt Bestandteil dieses Projekts und ist bei jeder erlaubten öffentlichen Darstellung beizubehalten.
+
+Die öffentliche Präsentation ist nur im Rahmen der in der Lizenz beschriebenen Portfolio-Nutzung zulässig. Dazu gehören insbesondere die nicht-kommerzielle Nutzung, ausschließlich fiktive Testdaten und die gut sichtbare Attribution:
+
+**„Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.“**
+
+KanMind ist in dieser Bereitstellung eine gemeinsame Demo. Öffentliche Registrierung und persönliche Benutzerkonten sind deaktiviert. Besucher verwenden ausschließlich den gemeinsamen Demo-Zugang. Bitte keine echten personenbezogenen oder vertraulichen Daten eingeben.
+
+Die Lizenz sieht für öffentliche Demo-Deployments mit Produktcharakter eine vorherige schriftliche Zustimmung der Developer Akademie GmbH vor. Im Zweifel ist diese Zustimmung vor dem öffentlichen Betrieb einzuholen.
 
 ---
