@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KanMind - Dashboard</title>
+    <title>KanMind – Datenschutzerklärung</title>
 
     <link rel="stylesheet" href="../../shared/css/variables.css">
     <link rel="stylesheet" href="../../shared/css/standard.css">
@@ -12,44 +11,219 @@
     <link rel="stylesheet" href="../../shared/css/assets.css">
     <link rel="stylesheet" href="../../shared/css/header_footer.css">
 
+    <script src="../../shared/js/config.js"></script>
     <script src="../../shared/js/ui_helper.js"></script>
     <script src="../../shared/js/api.js"></script>
     <script src="../../shared/js/header.js"></script>
 
     <script>
-        function checkNav(){
-            if(getAuthUserId() == null) document.querySelector("nav").remove();
-        };
+        function checkNav() {
+            if (getAuthUserId() == null) document.querySelector("main > nav").remove();
+        }
     </script>
 </head>
-
-<body onload="setHeader();checkNav()">
+<body onload="setHeader(); checkNav()">
     <header onclick="redirectToDashboard()" class="main_header w_full">
-        <img src="../../assets/icons/logo_icon.svg" alt="" srcset="">
+        <img src="../../assets/icons/logo_icon.svg" alt="KanMind">
         <div id="head_content_right" class="d_flex_cc_gm head_content_right"></div>
     </header>
-    <main class="w_full d_flex_ss_gl font_white_color">
 
+    <main class="w_full d_flex_ss_gl font_white_color">
         <nav class="font_sec_color w_full">
             <a class="link_secondary" href="../dashboard/">Dashboard</a>
             /
-            <a class="link_secondary" href="./index.html">Privacy Policy</a>
+            <a class="link_secondary" href="./index.html">Datenschutzerklärung</a>
         </nav>
 
-        <h1 class="font_prime_color">Privacy Policy</h1>
+        <h1 class="font_prime_color">Datenschutzerklärung</h1>
+        <p>Stand: 18. November 2026</p>
 
         <section class="d_flex_ss_gm f_d_c">
-            <h2>Subtitle</h2>
+            <h2>1. Verantwortlicher</h2>
+            <address>
+                Asbjörn Kurrek<br>
+                Bahnhofstrasse 2<br>
+                57627 Hachenburg, Deutschland<br>
+                E-Mail: <a class="link_secondary" href="mailto:akvis2022@gmail.com">akvis2022@gmail.com</a><br>
+                Telefon: <a class="link_secondary" href="tel:+4917682938989">0176 - 82 93 89 89</a>
+            </address>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>2. Umfang und Zweck des Demo-Angebots</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea placeat illo omnis, atque temporibus nostrum quia! Impedit, aliquid. Placeat impedit neque quod quasi eos fuga ipsa fugit odit voluptatem?
+                KanMind wird hier ausschließlich als nicht-kommerzielle Portfolio-Demo bereitgestellt.
+                Es gibt keine öffentliche Registrierung und keine persönlichen Benutzerkonten. Besucher
+                melden sich über einen gemeinsamen Demo-Zugang an. Die Demo dient dazu, Funktionen zur
+                Verwaltung von Boards, Aufgaben und Kommentaren vorzuführen.
+            </p>
+            <p>
+                Bitte verwende ausschließlich fiktive Testdaten. Gib insbesondere keine echten Namen,
+                E-Mail-Adressen, Kontaktdaten, vertraulichen Informationen oder Daten anderer Personen ein.
+                Alle Besucher verwenden denselben Demo-Datenbestand; Inhalte können daher von anderen
+                Besuchern eingesehen, geändert oder gelöscht werden.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>3. Welche Daten verarbeitet werden</h2>
+            <p>Bei der Nutzung können insbesondere folgende Daten verarbeitet werden:</p>
+            <ul>
+                <li>
+                    <strong>Authentifizierungsdaten:</strong> Demo-Benutzername bzw. E-Mail-Adresse,
+                    Benutzer-ID und ein Authentifizierungs-Token.
+                </li>
+                <li>
+                    <strong>Inhalte der Anwendung:</strong> Board-Titel und Mitgliederzuordnungen,
+                    Aufgaben-Titel und -Beschreibungen, Status, Priorität, Fälligkeitsdatum,
+                    Zuordnungen zu Bearbeitern und Reviewern sowie Kommentare und deren Erstellungszeitpunkt.
+                </li>
+                <li>
+                    <strong>Technische Verbindungsdaten:</strong> insbesondere IP-Adresse, Zeitpunkt des
+                    Zugriffs, angeforderte Adresse, HTTP-Status und – soweit vom Browser übermittelt –
+                    Browsertyp und Betriebssystem. Solche Angaben können in Server- bzw. Fehlerprotokollen
+                    anfallen.
+                </li>
+            </ul>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>4. Zwecke und Rechtsgrundlagen</h2>
+            <p>
+                Die Daten werden verarbeitet, um den Demo-Zugang bereitzustellen, die Anmeldung zu
+                ermöglichen, Boards und Aufgaben anzuzeigen und zu bearbeiten sowie den sicheren und
+                zuverlässigen Betrieb der Anwendung zu gewährleisten.
+            </p>
+            <p>
+                Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in der
+                Bereitstellung und Absicherung einer freiwillig aufgerufenen Portfolio-Demo sowie in
+                der Fehleranalyse und Abwehr missbräuchlicher Zugriffe.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>5. Speicherung im Browser</h2>
+            <p>
+                Nach dem Demo-Login speichert die Anwendung im localStorage des Browsers den
+                Authentifizierungs-Token, die Benutzer-ID, die Demo-E-Mail-Adresse, den angezeigten
+                Namen und eine Kennzeichnung der Demo-Sitzung. Der Token wird benötigt, um weitere
+                API-Anfragen der angemeldeten Demo-Sitzung zu authentifizieren.
+            </p>
+            <p>
+                Diese Speicherung ist für die ausdrücklich gewünschte Nutzung der Demo erforderlich
+                (§ 25 Abs. 2 TDDDG). Die Einträge werden beim Abmelden entfernt. Sie können außerdem
+                durch Löschen der Website-Daten im Browser entfernt werden. Die Anwendung verwendet
+                diese Angaben nicht für Werbe- oder Analyseprofile.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>6. Speicherung auf dem Server und Speicherdauer</h2>
+            <p>
+                Die Anwendungsdaten werden in einer vom übrigen KanMind-Datenbestand getrennten
+                Demo-Datenbank auf einem selbst betriebenen Server gespeichert. Der Demo-Datenbestand
+                bleibt über einen Neustart des Dienstes hinaus erhalten und wird nicht automatisch
+                nach jeder Sitzung gelöscht. Er kann durch den Betreiber zurückgesetzt werden.
+            </p>
+            <p>
+                Technische Protokolldaten werden zur Gewährleistung des Betriebs und zur Untersuchung
+                von Störungen oder Angriffen verarbeitet. Die konkrete Aufbewahrungsdauer richtet sich
+                nach der auf dem Server eingerichteten Protokollrotation. Eine feste Frist wird hier
+                nicht zugesichert.
+            </p>
+            <p>
+                Da es sich um einen gemeinsamen Testzugang handelt, besteht kein Anspruch darauf,
+                dass selbst angelegte Demo-Inhalte dauerhaft erhalten bleiben. Bitte speichere dort
+                keine Informationen, die du vertraulich behandeln musst.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>7. Eingesetzter Drittanbieter: jsDelivr</h2>
+            <p>
+                Auf der Dashboard-Seite wird die JavaScript-Bibliothek Chart.js über das Content
+                Delivery Network jsDelivr geladen. Beim Abruf dieser Datei erhält der CDN-Dienst
+                technisch bedingt insbesondere die IP-Adresse, Browserinformationen, die aufrufende
+                Domain bzw. Referrer-Informationen sowie Datum und Uhrzeit des Abrufs. Auf diese
+                Übermittlung hat der Betreiber dieser Demo keinen unmittelbaren Einfluss.
+            </p>
+            <p>
+                Weitere Informationen findest du in der
+                <a class="link_secondary" href="https://github.com/jsdelivr/jsdelivr/blob/master/Privacy%20Policy.md" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von jsDelivr</a>.
+                Da ein global verteiltes CDN eingesetzt wird, kann eine Verarbeitung außerhalb des
+                Europäischen Wirtschaftsraums nicht ausgeschlossen werden.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>8. Empfänger und Weitergabe</h2>
+            <p>
+                Eine Weitergabe der in der Demo eingegebenen Board-, Aufgaben- und Kommentarinhalte
+                an Dritte zu Werbe- oder Verkaufszwecken findet nicht statt. Die unter Ziffer 7
+                beschriebene Übermittlung an jsDelivr erfolgt beim Laden der Dashboard-Bibliothek.
+                Eine Offenlegung kann außerdem erforderlich sein, wenn eine gesetzliche Verpflichtung
+                besteht oder dies zur Abwehr rechtswidriger Angriffe notwendig ist.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>9. Cookies und Tracking</h2>
+            <p>
+                Die Anmeldung der KanMind-Webanwendung erfolgt über einen Token im localStorage.
+                Es ist kein eigenes Werbe- oder Analyse-Tracking eingebunden. Der Abruf der
+                Dashboard-Bibliothek über jsDelivr ist in Ziffer 7 beschrieben.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>10. Deine Rechte</h2>
+            <p>Du hast nach Maßgabe der gesetzlichen Voraussetzungen insbesondere das Recht auf:</p>
+            <ul>
+                <li>Auskunft über die verarbeiteten personenbezogenen Daten (Art. 15 DSGVO),</li>
+                <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO),</li>
+                <li>Löschung (Art. 17 DSGVO),</li>
+                <li>Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
+                <li>Datenübertragbarkeit (Art. 20 DSGVO),</li>
+                <li>Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21 DSGVO).</li>
+            </ul>
+            <p>
+                Zur Ausübung deiner Rechte genügt eine Nachricht an
+                <a class="link_secondary" href="mailto:akvis2022@gmail.com">akvis2022@gmail.com</a>.
+                Bitte beschreibe möglichst genau, auf welche Daten sich deine Anfrage bezieht.
+            </p>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>11. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+            <p>
+                Du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+                Zuständig für Rheinland-Pfalz ist insbesondere:
+            </p>
+            <address>
+                Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz<br>
+                Hintere Bleiche 34<br>
+                55116 Mainz<br>
+                Telefon: +49 (0) 6131 8920-0<br>
+                E-Mail: <a class="link_secondary" href="mailto:poststelle@datenschutz.rlp.de">poststelle@datenschutz.rlp.de</a><br>
+                Website: <a class="link_secondary" href="https://www.datenschutz.rlp.de/" target="_blank" rel="noopener noreferrer">datenschutz.rlp.de</a>
+            </address>
+        </section>
+
+        <section class="d_flex_ss_gm f_d_c">
+            <h2>12. Änderungen dieser Datenschutzerklärung</h2>
+            <p>
+                Diese Datenschutzerklärung wird angepasst, wenn sich die Datenverarbeitung oder
+                die rechtlichen Anforderungen ändern. Es gilt die jeweils auf dieser Seite
+                veröffentlichte Fassung.
             </p>
         </section>
     </main>
-    <footer class="main_footer  w_full">
+
+    <footer class="main_footer w_full">
         <nav class="d_flex_cs_gl">
-            <a href="../imprint/index.html" class="link">Imprint</a>
+            <a href="../imprint/index.html" class="link">Impressum</a>
         </nav>
+        <p class="font_sec_color">Entwickelt im Rahmen des Weiterbildungsprogramms der Developer Akademie GmbH.</p>
     </footer>
 </body>
-
 </html>
