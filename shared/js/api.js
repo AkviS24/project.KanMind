@@ -1,8 +1,13 @@
-function setAuthCredentials(token, userId, email, fullname) {
+function setAuthCredentials(token, userId, email, fullname, isGuest = false) {
     localStorage.setItem('auth-token', token);
     localStorage.setItem('auth-user-id', userId);
     localStorage.setItem('auth-email', email);
     localStorage.setItem('auth-fullname', fullname);
+    if (isGuest) {
+        localStorage.setItem('auth-demo-session', 'true');
+    } else {
+        localStorage.removeItem('auth-demo-session');
+    }
 }
 
 function removeAuthCredentials() {
@@ -10,6 +15,13 @@ function removeAuthCredentials() {
     localStorage.removeItem('auth-user-id');
     localStorage.removeItem('auth-email');
     localStorage.removeItem('auth-fullname');
+    localStorage.removeItem('auth-demo-session');
+}
+
+function getApiBaseUrl() {
+    return localStorage.getItem('auth-demo-session') === 'true'
+        ? DEMO_API_BASE_URL
+        : API_BASE_URL;
 }
 
 function getAuthToken() {
@@ -81,7 +93,7 @@ function getFormData(form){
 
 async function getData(endpoint) {
     try {
-        const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        const response = await fetch(`${getApiBaseUrl()}${endpoint}`, {
             method: 'GET',
             headers: createHeaders(),
         });
@@ -102,12 +114,12 @@ async function getData(endpoint) {
     }
 }
 
-async function postData(endpoint, data) {
+async function postData(endpoint, data, baseUrl = getApiBaseUrl()) {
     
     let header = createHeaders();
     header['Content-Type'] = 'application/json';
     try {
-        const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        const response = await fetch(`${baseUrl}${endpoint}`, {
             method: 'POST',
             headers: header,
             body: JSON.stringify(data)
@@ -135,7 +147,7 @@ async function patchData(endpoint, data) {
     let header = createHeaders();
     header['Content-Type'] = 'application/json';
     try {
-        const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        const response = await fetch(`${getApiBaseUrl()}${endpoint}`, {
             method: 'PATCH',
             headers: header,
             body: JSON.stringify(data)
@@ -160,7 +172,7 @@ async function patchData(endpoint, data) {
 
 async function deleteData(endpoint) {
     try {
-        const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        const response = await fetch(`${getApiBaseUrl()}${endpoint}`, {
             method: 'DELETE',
             headers: createHeaders(),
         });
