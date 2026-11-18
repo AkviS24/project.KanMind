@@ -24,12 +24,6 @@ function getApiBaseUrl() {
         : API_BASE_URL;
 }
 
-function getApiBaseUrl() {
-    return localStorage.getItem('auth-demo-session') === 'true'
-        ? DEMO_API_BASE_URL
-        : API_BASE_URL;
-}
-
 function getAuthToken() {
     return localStorage.getItem('auth-token');
 }
